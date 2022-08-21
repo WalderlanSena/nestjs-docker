@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  findoce-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    volumes:
+      - ./src:/app/src
+    ports:
+      - 3000:3000
